@@ -5,7 +5,7 @@ pipeline{
     
     stage('main_branch'){
       when{
-        branch 'main'
+        changeRequest title:"when-pr"
       }
       steps{
           echo "building main/master branch..."
