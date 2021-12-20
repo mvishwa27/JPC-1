@@ -1,0 +1,16 @@
+pipeline{
+
+  agent any
+  stages{
+    
+    stage('main_branch'){
+        when {
+          changeRequest()
+        }
+      steps{
+          echo "executing this stage if the build is on a change request..."
+      }
+    }
+ 
+  }
+}
