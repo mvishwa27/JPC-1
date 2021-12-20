@@ -1,0 +1,17 @@
+pipeline{
+
+  agent any
+  stages{
+    
+    stage('main_branch'){
+      when{
+        branch 'main'
+      }
+      steps{
+          echo "building main/master branch..."
+      }
+    }
+  
+    
+  }
+}
