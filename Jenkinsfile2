@@ -6,7 +6,7 @@ pipeline{
     stage('main_branch'){
     
         when {
-          changeRequest target: 'main'
+          changeRequest title: 'when-pr'
         }
        steps{
           echo "executing this stage if the build is on a change request..."
