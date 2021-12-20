@@ -1,0 +1,18 @@
+pipeline{
+
+  agent any
+  stages{
+    
+    stage('main_branch'){
+        when {
+          changelog 'HPHX*'
+        }
+      steps{
+          echo "building main/master branch if a commit message in the changelog matches..."
+      }
+    }
+ 
+    
+    
+  }
+}
