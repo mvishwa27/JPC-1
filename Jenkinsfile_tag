@@ -1,0 +1,18 @@
+
+pipeline{
+
+  agent any
+  stages{
+    
+    stage('main_branch'){
+      when{
+          buildingTag()
+      }
+      steps{
+          echo "building from tag..."
+      }
+    }
+      
+    
+  }
+}
