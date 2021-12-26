@@ -20,7 +20,7 @@ stages{
             echo "present working directory after change-2:"
             sh "pwd"
           }
-          sh "git status
+          sh "git status"
       }
   }
 }
