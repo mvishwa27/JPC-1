@@ -14,7 +14,7 @@ stages{
           sh "cd source"
           echo "present working directory after change-1:"
           sh "pwd"
-          dir('${env.WORKSPACE}/source'){
+          dir("${env.WORKSPACE}/source"){
             echo "present working directory after change-2:"
             sh "pwd"
           }
