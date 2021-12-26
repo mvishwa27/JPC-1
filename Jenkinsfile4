@@ -5,6 +5,7 @@ stages{
   stage('Build'){
       steps {
           echo "Hello.."
+          sh "git status"
       }
   }
 }
