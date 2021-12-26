@@ -10,10 +10,14 @@ stages{
           echo "present working directory:"
           sh "pwd"
           echo "my workspace is:"
-          sh "echo ${WORKSPACE}"
+          sh "echo ${env.WORKSPACE}"
           sh "cd source"
-          echo "present working directory after change:"
+          echo "present working directory after change-1:"
           sh "pwd"
+          dir('${env.WORKSPACE}/source'){
+            echo "present working directory after change-2:"
+            sh "pwd"
+          }
       }
   }
 }
