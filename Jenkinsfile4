@@ -11,6 +11,9 @@ stages{
           sh "pwd"
           echo "my workspace is:"
           sh "echo ${WORKSPACE}"
+          sh "cd source"
+          echo "present working directory after change:"
+          sh "pwd"
       }
   }
 }
