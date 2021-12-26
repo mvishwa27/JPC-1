@@ -7,6 +7,10 @@ stages{
           echo "Hello.."
           sh "git checkout main"
           sh "git status"
+          echo "present working directory:"
+          sh "pwd"
+          echo "my workspace is:"
+          sh "echo ${WORKSPACE}"
       }
   }
 }
