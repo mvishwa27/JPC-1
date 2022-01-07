@@ -1,0 +1,31 @@
+
+pipeline{
+agent none
+  stages{
+     
+     stage('node version check'){
+          agent {
+             docker {
+                image 'node:16-alpine'
+               }
+             }
+        steps{
+            sh 'node --version'   
+        }
+      }
+      
+      stage('jekyl-version-check'){
+          agent {
+             docker {
+                image 'jekyll/jekyll:latest'
+               }
+             }
+        steps{
+            sh 'jekyll -v'   
+        }
+      }
+      
+      
+      
+  }
+}
