@@ -2,7 +2,7 @@ pipeline{
 agent none
   stages
   {
-      stage('Node'){
+      stage('build'){
          agent{
             docker {
                 image 'node:16-alpine'
@@ -14,14 +14,14 @@ agent none
       }      
       
       
-      stage('Jekyll'){
+      stage('build2'){
          agent{
             docker {
-                image 'jekyll/jekyll:latest'
+                image 'node:16-alpine'
             }
           }
         steps{
-            sh 'jekyll -v'   
+            sh 'node --version'   
         }
       }
       
