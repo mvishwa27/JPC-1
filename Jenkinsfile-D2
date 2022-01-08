@@ -15,11 +15,11 @@ agent none
      stage('Front'){
          agent{
             docker {
-                image 'node:16-alpine'
+                image 'jekyll/jekyll:latest'
             }
           }
         steps{
-            sh 'node --version'   
+            sh 'jekyll -v'   
         }
       }  
       
