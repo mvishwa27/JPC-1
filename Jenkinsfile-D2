@@ -1,18 +1,13 @@
+
 pipeline{
 agent{
-       docker {
-             image 'jekyll/jekyll:latest'
-         }
-      }
-  stages
-  {      
-     stage('Jekyll-Build'){
+  dockerfile true
+}
+  stages{
+      stage('Example'){
         steps{
-            sh 'jekyll -v'   
+            echo "Hello-World!"
         }
-      }  
-      
-  
+      }
   }
-
 }
