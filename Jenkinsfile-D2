@@ -14,16 +14,7 @@ agent none
       }      
       
       
-      stage('build2'){
-         agent{
-            docker {
-                image 'node:16-alpine'
-            }
-          }
-        steps{
-            sh 'node --version'   
-        }
-      }
+
       
       
       
