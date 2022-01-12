@@ -9,6 +9,7 @@ agent{
             echo "Hello-World!"
             sh 'echo myCustomVar = $myCustomVar'
             sh 'python3 hello_world.py'
+            sh 'python3 sum1.py'
         }
       }
   }
